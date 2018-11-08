@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ABC Form</title>
+</head>
+<body>
+    <form action="{% url 'abc_engine' %}" method="post" id="abc_form" name="collect_data_form" >
+        {% csrf_token %}
+        <div id="abc">
+            A0=&nbsp;<input type="text" name="p1" value="" />&nbsp;&nbsp;
+            A0 range=&nbsp;<input type="text" name="kp1" value="" />&nbsp;&nbsp;
+            B0 range=&nbsp;<input type="text" name="kp2" value="" />&nbsp;&nbsp;
+            C0 range=&nbsp;<input type="text" name="kp3" value="" />&nbsp;&nbsp;
+            <input type="submit" value="Generate" id="submit"/>
+        </div>
+    </form>
+</body>
+</html>

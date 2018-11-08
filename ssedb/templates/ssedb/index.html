@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sequence Seeker Database</title>
+</head>
+<body>
+<a href="{% url 'show_all' %}">Show all</a>
+<a href="{% url 'show' 1 %}">Show id 1</a>
+<a href="{% url 'show_form' %}">List From</a>
+{% if primes %}
+    <p>
+
+    {% for prime in primes %}
+        {{ prime.value }},
+    {% endfor %}
+
+    </p>
+{% endif %}
+
+</body>
+</html>

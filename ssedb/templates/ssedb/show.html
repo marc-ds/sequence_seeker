@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+    {% if x0_list %}
+    <p>
+       {% for x0 in x0_list %}
+        X0: {{ x0 }} <br>
+        {% for sequence in x0.sequence_set.all %}
+         ---Sequence:
+         {% for pn in sequence.primes_numbers.values|dictsort:"y" %}
+          {{ pn.value }}
+         {% endfor %}<br>
+        {% endfor %}
+       {% endfor %}
+    </p>
+    {% endif %}
+</body>
+</html>

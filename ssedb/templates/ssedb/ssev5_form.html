@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SSEDB: Search Records Form</title>
+</head>
+<body>
+
+    <form action="{% url 'ssev5_engine' %}" method="post" id="sequence_seeker_form" name="collect_data_form" >
+        {% csrf_token %}
+        <div id="abc">
+            P1=&nbsp;<input type="text" name="p1" value="" />&nbsp;&nbsp;
+            P1 range=&nbsp;<input type="text" name="kp1" value="" />&nbsp;&nbsp;
+            P2 range=&nbsp;<input type="text" name="kp2" value="" />&nbsp;&nbsp;
+            P3 range=&nbsp;<input type="text" name="kp3" value="" />&nbsp;&nbsp;
+            <input type="submit" value="Generate" id="submit"/>
+        </div>
+    </form>
+
+</body>
+</html>
